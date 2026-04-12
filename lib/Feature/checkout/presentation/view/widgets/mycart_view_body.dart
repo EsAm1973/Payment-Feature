@@ -9,13 +9,6 @@ class MyCartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return Column(
-      children: [
-        SizedBox(height: 10),
-        Center(child: Image.asset('assets/basket.png')),
-      ],
-=======
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -32,7 +25,6 @@ class MyCartViewBody extends StatelessWidget {
           ),
         ],
       ),
->>>>>>> 18c273161f24db5d168bc81d507d68b9832e5626
     );
   }
 }
