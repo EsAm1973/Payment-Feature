@@ -5,6 +5,11 @@ class MyCartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: []);
+    return Column(
+      children: [
+        SizedBox(height: 10),
+        Center(child: Image.asset('assets/basket.png')),
+      ],
+    );
   }
 }
