@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:payment_feature/Core/componant/custom_pay_botton.dart';
-import 'package:payment_feature/Core/routing/app_routes.dart';
 import 'package:payment_feature/Feature/checkout/presentation/view/widgets/order_summary.dart';
+import 'package:payment_feature/Feature/checkout/presentation/view/widgets/payment_methods_bottom_sheet.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -19,7 +18,10 @@ class MyCartViewBody extends StatelessWidget {
           SizedBox(height: 16),
           CustomPaymentButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRoutes.paymentDetailsViewRoute);
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => const PaymentMethodsBottomSheet(),
+              );
             },
             label: 'Complete Payment',
           ),
